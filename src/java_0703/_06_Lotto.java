@@ -8,8 +8,8 @@ public class _06_Lotto {
         Set<Integer> lottoNumbers = new HashSet<>();
 
         // 로또 번호 생성
-        while (lottoNumbers.size() < 6) {
-            int randomNumber = RandomNumber();
+        while (lottoNumbers.size() != 6) {
+            int randomNumber = (int) (Math.random() *45) + 1;
             lottoNumbers.add(randomNumber);
         }
 
@@ -17,10 +17,5 @@ public class _06_Lotto {
         System.out.println("로또 번호: " + lottoNumbers);
     }
 
-    // 1부터 45 사이의 난수 생성
-    private static int RandomNumber() {
-        Random random = new Random();
-        return random.nextInt(45) + 1;
-    }
 }
 
