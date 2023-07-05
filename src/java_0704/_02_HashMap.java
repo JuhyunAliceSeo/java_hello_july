@@ -105,28 +105,38 @@ public class _02_HashMap {
 //	       scanner1.close();
 //	    
 	        
-	        List<Integer> list = new LinkedList<>();
-	        Scanner sc;
+		   List<Integer> list = new LinkedList<>();
+	       Scanner sc1 = new Scanner(System.in);
+	       
+	       System.out.println("정수(-1이 입력될 때까지)>>");
+	       
+	       while(true) {        
+	          
+	          try {
+	              int num = sc1.nextInt(); //7 9 10
+	              
+	              if(num == -1)
+	                 break;
+	              
+	              list.add(num);
+	         } catch (Exception e) {
+	            System.out.println("잘못된 입력입니다. 다시 넣어 주세요");
+	             sc1 = new Scanner(System.in);
+	            continue;
+	         }
 
-	        while (true) {
-	            Scanner scanner = new Scanner(System.in);
-	            System.out.println("숫자를 적으세요");
-	            int num1 = scanner.nextInt();
-
-	            if (num1 == -1) {
-	                break;
-	            }
-
-	            list.add(num1);
-	        }
-
-	        int max = Integer.MIN_VALUE;
-	        for (int num1 : list) {
-	            if (num1 > max) {
-	                max = num1;
-	            }
-	        }
-
-	        System.out.println("가장 큰 수: " + max);
+	       }
+	       
+	       //큰값 구하기
+	       
+	       int max = 0;
+	       for (int num : list) {
+	         if(num > max)
+	            max = num;
+	      }
+	       
+	       System.out.println("가장 큰수는" + max);
+	       
+	       System.out.println(list);
 	}
 }
