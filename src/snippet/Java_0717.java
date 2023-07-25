@@ -16,6 +16,7 @@ class Circle1 extends Shape{
 	
 	public Circle1(int num) {
 		this.num = num;
+		System.out.println("원의 넓이는 " + getArea() + "이고 반지름은 " + num +" 인원" );
 	}
 	
 	@Override
@@ -54,6 +55,10 @@ public class Java_0717 {
          }
 
          System.out.println(area);
+         
+         Circle1 circle = new Circle1(10);
+         
+         System.out.println(circle); //원의 넓이는 314.1592 이고 반지름은 10 인원 
 	}
 
 }

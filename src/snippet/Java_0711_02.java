@@ -46,57 +46,57 @@ package snippet;
 //	   public double getArea();
 //	}
 
-class SPrinterDriver implements Printable{
-	
-	String SS = "Samsung printer";
-		
-
-
-	@Override
-	public void print(String doc) {
-		System.out.println("From "  + SS);
-		System.out.println(doc);
-	}
-}
-
-class LPrinterDriver implements Printable{
-	
-	String LG = "LG printer";
-
-	
-	@Override
-	public void print(String doc) {
-		System.out.println("From "  + LG);
-		System.out.println(doc);
-	}
-}
-
-
-interface Printable { // MS가 정의하고 제공한 인터페이스
-    public void print(String doc);
-}
-
-public class Java_0711_02 {
-	
-		   public static void main(String[] args) {
-
-//		        Shape[] shape = { new Circle(10), new Rectangle(10, 20), new Triangle(10, 20) };
+//class SPrinterDriver implements Printable{
+//	
+//	String SS = "Samsung printer";
+//		
 //
-//		        //
-//		        for(Shape s: shape)
-//		           System.out.println(s.getClass().getName() + " : " + s.getArea());
+//
+//	@Override
+//	public void print(String doc) {
+//		System.out.println("From "  + SS);
+//		System.out.println(doc);
+//	}
+//}
+//
+//class LPrinterDriver implements Printable{
+//	
+//	String LG = "LG printer";
+//
+//	
+//	@Override
+//	public void print(String doc) {
+//		System.out.println("From "  + LG);
+//		System.out.println(doc);
+//	}
+//}
+//
+//
+//interface Printable { // MS가 정의하고 제공한 인터페이스
+//    public void print(String doc);
+//}
+//
+//public class Java_0711_02 {
+//	
+//		   public static void main(String[] args) {
+//
+////		        Shape[] shape = { new Circle(10), new Rectangle(10, 20), new Triangle(10, 20) };
+////
+////		        //
+////		        for(Shape s: shape)
+////		           System.out.println(s.getClass().getName() + " : " + s.getArea());
+////		   }
+//		   
+//           String myDoc = "This is a report about...";
+//
+//           // 삼성 프린터로 출력
+//           Printable prn = new SPrinterDriver();
+//           prn.print(myDoc);
+//           System.out.println();
+//
+//           // LG 프린터로 출력
+//           prn = new LPrinterDriver();
+//           prn.print(myDoc);
+//
 //		   }
-		   
-           String myDoc = "This is a report about...";
-
-           // 삼성 프린터로 출력
-           Printable prn = new SPrinterDriver();
-           prn.print(myDoc);
-           System.out.println();
-
-           // LG 프린터로 출력
-           prn = new LPrinterDriver();
-           prn.print(myDoc);
-
-		   }
-}
+//}
