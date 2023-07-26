@@ -12,15 +12,10 @@ class Member1{
 	@Override
 	public boolean equals(Object obj) {
 		
-		if (this == obj) {
-			return true;
-		}
-		return false;
-        }
-        Member1 other = (Member1) obj;
-        return obj.equals(other.getS());
+        Member1 other = (Member1)obj;
+        return s.equals(other.getS());
 	}
-	
+
 
 	
 }
