@@ -1,6 +1,7 @@
 package snippet;
 
 import java.util.HashSet;
+import java.util.Set;
 
 class Person2{
 	String s;
@@ -52,7 +53,7 @@ class Person2{
 	
 }
 
-public class Java_0726 {
+public class Java_0726_hashsetLotto {
 	public static void main(String[] args) {
         HashSet<Person2> hSet = new HashSet<Person2>();
         hSet.add(new Person2("LEE", 10));
@@ -64,5 +65,19 @@ public class Java_0726 {
         System.out.println(hSet);
         //저장된 데이터 수: 2
         //[LEE(10세), PARK(35세)]
+        
+        Set<Integer> lotto1 = new HashSet<>();
+        
+//        while (lotto1.size() !=6) {
+//        	int lottonum = (int)(Math.random()*45)+1;
+//        	lotto1.add(lottonum);
+//        };
+        while (true) {
+        	if(lotto1.size() >=6) break;
+        	int lottonum = (int)(Math.random()*45)+1;
+        	lotto1.add(lottonum);
+        };
+        	System.out.println(lotto1);
+       
 	}
 }
